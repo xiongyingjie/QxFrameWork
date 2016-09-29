@@ -1,0 +1,23 @@
+﻿@model Web.Areas.Permission.ViewModels.Admin.ButtonList_M
+@{
+    Layout = ViewData["Layout"].ToString();
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<div class="row">
+    <div class="col-lg-10">
+        @Html.TextBox("菜单编号", "", new { PlaceHolder = "请输入要查询的菜单编号（支持模糊查询）" })
+    </div>
+</div>
+
+
+<script>
+    function Preview() {
+        var Params =
+            v("菜单编号");
+
+        Query(Params, "@ViewData["Url"]");
+    }
+</script>

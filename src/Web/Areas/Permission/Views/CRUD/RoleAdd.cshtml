@@ -1,0 +1,42 @@
+﻿@model Web.Areas.Permission.ViewModels.CRUD.RoleAdd_M
+@{
+    Layout = ViewData["Layout"].ToString();
+}
+
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.roleid, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.roleid, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.name, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.name, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.roletype, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.roletype, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.subSystem, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.subSystem, new { @class = "form-control" })
+                        </div>
+                    </div>
+                   <div class="form-group">
+                          @Html.LabelFor(o => o.isDefault, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.DropDownListFor(o => o.isDefault,Model.selectItems, new { @class = "form-control" })
+                        </div>
+                 </div>
+
+
+
+
+
+

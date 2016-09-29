@@ -1,0 +1,35 @@
+﻿@model Web.Areas.Permission.ViewModels.CRUD.UserRoleAdd_M
+@{
+    Layout = ViewData["Layout"].ToString();
+}
+
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.userid, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.userid, new { @class = "form-control" ,@readonly="readonly"})
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.roleid, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.roleid, new { @class = "form-control" })
+                            <a href="/Permision2/Admin/ChooseRoleList?ReportID=Permision_选择分配角色&Params=;&userid=@Model.userid">查角色列表</a>
+                        </div>
+                    </div>
+                   <div class="form-group">
+                       @Html.LabelFor(o => o._rolename, new { @class = "col-md-3 control-label" })
+                      <div class="col-md-9">
+                           @Html.TextBoxFor(o => o._rolename, new { @class = "form-control" })                      
+                     </div>
+                  </div>
+                  <div class="form-group">
+                       @Html.LabelFor(o => o.note, new { @class = "col-md-3 control-label" })
+                       <div class="col-md-9">
+                           @Html.TextAreaFor(o => o.note, new { @class = "form-control" })
+                       </div>
+                 </div>
+
+
+
+
+

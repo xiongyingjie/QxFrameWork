@@ -1,0 +1,43 @@
+﻿@using Qx.Tools.CommonExtendMethods;
+@model Web.Areas.Permission.ViewModels.CRUD.ButtonAdd_M
+@{
+    Layout = ViewData["Layout"].ToString();
+}
+
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.menuid, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @if(Model.menuid.HasValue())
+                            {
+                                 @Html.TextBoxFor(o => o.menuid, new { @class = "form-control" ,@readonly="readonly"})
+                            }
+                            else
+                            { 
+                             @Html.TextBoxFor(o => o.menuid, new { @class = "form-control" })
+                            }    
+                            <a href="/Permision2/Admin/ChooseMenuList?ReportID=Permision_选择菜单&Params=;">查看菜单列表</a>
+                        </div>
+                    </div>          
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.name, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.name, new { @class = "form-control" })
+                        </div>
+                    </div>                   
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.value, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.value, new { @class = "form-control" })
+                        </div>
+                    </div>
+                     <div class="form-group">
+                            @Html.LabelFor(o => o.note, new { @class = "col-md-3 control-label" })
+                         <div class="col-md-9">
+                                  @Html.TextAreaFor(o => o.note, new { @class = "form-control" })
+                          </div>
+                    </div>
+
+
+
+
+

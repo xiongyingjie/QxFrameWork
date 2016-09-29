@@ -1,0 +1,15 @@
+﻿@using Qx.Tools.CommonExtendMethods
+@{
+   
+    try
+    {
+        var layout = Context.Items["Layout"].ToString();
+        Layout = layout.HasValue() ? layout : "~/Views/Shared/_SbLayout.cshtml";
+    }
+    catch (Exception)
+    {
+
+        Layout = "~/Views/Shared/_SbLayout.cshtml";
+    }
+   
+}

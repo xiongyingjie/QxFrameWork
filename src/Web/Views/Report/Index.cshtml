@@ -1,0 +1,21 @@
+﻿@{
+    Layout = ViewData["Layout"].ToString();
+}
+<div class="row">
+    <div class="col-lg-2">
+        <label>报表ID</label>
+    </div>
+    <div class="col-lg-10">
+        @Html.TextBox("报表ID", "", new { PlaceHolder = "请输入要查询的报表ID" })
+    </div>
+</div>
+
+<script>
+    function Search() {
+        var Params = v("报表ID");
+       return Params;
+    }
+</script>
+
+@*<span>报表引擎1.0  2016/08/01</span>*@
+@*<span>报表引擎1.0  2016/09/10</span>*@

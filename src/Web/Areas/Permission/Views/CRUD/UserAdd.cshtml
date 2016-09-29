@@ -1,0 +1,37 @@
+﻿@model Web.Areas.Permission.ViewModels.CRUD.UserAdd_M
+@{
+    Layout = ViewData["Layout"].ToString();
+}
+
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.userid, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.userid, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.nickname, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.nickname, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.userpwd, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.userpwd, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(o => o.usertype, new { @class = "col-md-3 control-label" })
+                        <div class="col-md-9">
+                            @Html.TextBoxFor(o => o.usertype, new { @class = "form-control" })
+                        </div>
+                    </div>
+                   <div class="form-group">
+                       @Html.LabelFor(o => o.note, new { @class = "col-md-3 control-label" })
+                      <div class="col-md-9">
+                           @Html.TextAreaFor(o => o.note, new { @class = "form-control" })
+                      </div>
+                 </div>
+
+

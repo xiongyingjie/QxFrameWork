@@ -1,0 +1,7 @@
+﻿@model Web.Areas.Contents.ViewModels.CTD_M
+@{
+    Layout = ViewData["Layout"].ToString();
+}
+@Html.InputFor(o => o.TableName)
+
+@Html.SelectFor(o => o.CT_ID, Model.CTselectItems)

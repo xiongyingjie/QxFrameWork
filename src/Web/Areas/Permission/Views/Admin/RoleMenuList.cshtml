@@ -1,0 +1,28 @@
+﻿@model Web.Areas.Permission.ViewModels.Admin.RoleMenuList_M
+@{
+    Layout = ViewData["Layout"].ToString();
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="col-md-12">
+    <ol class="page-breadcrumb breadcrumb">
+        <li><a href="/Permision2/Admin/RoleList?ReportID=Permision_角色列表&Params=@Model.role.RoleID">[角色列表]@Model.role.Name</a> <i class="fa fa-angle-right"></i></li>
+    </ol>
+
+</div>
+<div class="row">
+    <div class="col-lg-10">
+        @Html.TextBox("角色编号", "", new { PlaceHolder = "请输入要查询的角色编号（支持模糊查询）" })
+    </div>
+</div>
+
+
+<script>
+    function Preview() {
+        var Params =
+            v("角色编号");
+
+        Query(Params, "@ViewData["Url"]");
+    }
+</script>

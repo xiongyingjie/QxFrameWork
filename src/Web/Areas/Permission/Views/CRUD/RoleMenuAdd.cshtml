@@ -1,0 +1,50 @@
+﻿@model Web.Areas.Permission.ViewModels.CRUD.RoleMenuAdd_M
+@{
+    Layout = ViewData["Layout"].ToString();
+}
+
+                        <div class="form-group">
+                            @Html.LabelFor(o => o.RoleID, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(o => o.RoleID, new { @class = "form-control", @readonly = "readonly" })
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            @Html.LabelFor(o => o._RoleName, new { @class = "col-md-3 control-label" })
+                           <div class="col-md-9">
+                                 @Html.TextBoxFor(o => o._RoleName, new { @class = "form-control", @readonly = "readonly" })
+                         </div>
+                     </div>
+                        <div class="form-group">
+                            @Html.LabelFor(o => o.MenuID, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.TextBoxFor(o => o.MenuID, new { @class = "form-control" })
+                                <a href="/Permision2/Admin/ChooseMenuList?ReportID=Permision_选择菜单&Params=;&roleid=@Model.RoleID">查看菜单列表</a>
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            @Html.LabelFor(o => o.MenuName, new { @class = "col-md-3 control-label" })
+                           <div class="col-md-9">
+                                @Html.TextBoxFor(o => o.MenuName, new { @class = "form-control" })                              
+                          </div>
+                     </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(o => o.includeChildren, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                                @Html.DropDownListFor(o => o.includeChildren,Model.selectItems, new { @class = "form-control" })
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            @Html.LabelFor(o => o.note, new { @class = "col-md-3 control-label" })
+                            <div class="col-md-9">
+                            @Html.TextAreaFor(o => o.note,  new { @class = "form-control" })
+                            </div>
+                      </div>
+
+
+
+
+
+
+
